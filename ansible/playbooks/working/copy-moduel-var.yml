@@ -1,9 +1,0 @@
---- # This is a copy module
-- hosts: all
-  vars_files:
-  - vars.yml
-  user: test
-  connection: ssh
-  tasks:
-  - name: copy the files
-    action: copy src="{{ home }}/a.txt" dest="{{ home }}"
