@@ -1,0 +1,12 @@
+- name: create folder
+  file:
+    path: /home/test/.ssh
+    state: directory
+    recurse: no
+
+- name: Ansible copy multiple files with_items
+  copy:
+    src: ~/.ssh/{{item}}
+    dest: "{{ home }}/.ssh"
+  with_items:
+    ['known_hosts','id_rsa.pub', 'authorized_keys']

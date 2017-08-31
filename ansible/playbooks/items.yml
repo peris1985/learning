@@ -1,0 +1,15 @@
+- hosts: appserver
+  remote_user: test
+  vars:
+    home: /home/test/
+  name: copy the file
+  tasks:
+    - include: /home/test/project/ansible/roles/common/tasks/copy.yml
+
+- hosts: webserver
+  remote_user: test
+  vars:
+    home: /home/test/
+  name: copy the file
+  tasks:
+    - include: /home/test/project/ansible/roles/common/tasks/copy.yml

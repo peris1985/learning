@@ -1,0 +1,10 @@
+- hosts: all
+  vars_files:
+  - vars.yml
+  user: test
+  connection: ssh
+  tasks:
+  - name: Ansible copy file to remote server
+    copy:
+      src: "{{ home }}/.ssh/id_rsa.pub"
+      dest: "{{ home }}/.ssh/"

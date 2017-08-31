@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+    - name: create folder
+      file:
+        path: /home/test/.ssh
+        state: directory 
+        recurse: no

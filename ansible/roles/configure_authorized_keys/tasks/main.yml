@@ -1,0 +1,5 @@
+- name: "Updating {{ ansible_ssh_user }} authorized key for current user/box combination on {{ ansible_nodename }}"
+  authorized_key:
+    user: "{{ ansible_ssh_user }}"
+    state: present
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"

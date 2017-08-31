@@ -1,0 +1,10 @@
+- hosts: all
+  vars_files:
+  - vars.yml
+  tasks:
+  - name: Ansible copy multiple files with_items
+    copy:
+      src: ~/.ssh/{{item}}
+      dest: "{{ home }}/.ssh"
+    with_items:
+      ['authorized_keys', 'id_rsa.pub', 'known_hosts']

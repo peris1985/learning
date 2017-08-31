@@ -1,0 +1,8 @@
+[localhost]
+127.0.0.1
+
+[webserver]
+peris19852.mylabserver.com
+
+[appserver]
+peris19853.mylabserver.com

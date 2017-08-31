@@ -1,0 +1,2 @@
+- name: Ansible copy multiple files with_items
+  synchronize: src="{{ home }}/.ssh/id_rsa.pub" dest="{{ home }}/.ssh"
